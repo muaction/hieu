@@ -177,6 +177,9 @@ html{
 html, body{
   height: 100%;
   -webkit-font-smoothing: antialiased;
+  /*hug_custom_body_font*/
+  font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+  /*end_custom*/
 }
 
 .body-masked{
@@ -461,7 +464,7 @@ table a{
   letter-spacing: 1px;
 }
 .font-alt{
-    font-family: Dosis, arial, sans-serif;
+    font-family: 'Open Sans',Helvetica,Arial,sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
@@ -7765,7 +7768,16 @@ div.pp_pic_holder{
   padding: 0 15px;
 }
 
+.hug_custom_padding{
+  padding: 0 15px;
+}
+
 .hug_custom_row .row .vc_col-sm-4 .section-text p{
   text-align: justify;
 }
+
+.hug_custom_text_align {
+  text-align: justify; 
+}
+
 /********************* End Css ****************************/
