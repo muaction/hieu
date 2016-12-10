@@ -84,8 +84,8 @@ function rhythm_post_navigation() {
 	<!-- Prev/Next Post -->
 	<div class="clearfix mt-40 post-navigation" role="navigation">
 		<?php
-		previous_post_link( '%link', '<i class="fa fa-angle-left"></i>&nbsp;'.__('Prev post', 'rhythm') );
-		next_post_link( '%link', __('Next post','rhythm').'&nbsp;<i class="fa fa-angle-right"></i>' );
+		previous_post_link( '%link', '<i class="fa fa-angle-left"></i>&nbsp;'.__('Trang Trước', 'rhythm') );
+		next_post_link( '%link', __('Trang Sau','rhythm').'&nbsp;<i class="fa fa-angle-right"></i>' );
 		?>
 		
 <!--		<a href="#" class="blog-item-more left"><i class="fa fa-angle-left"></i>&nbsp;Prev post</a>

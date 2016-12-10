@@ -26,6 +26,13 @@ if (ts_get_opt('header-bg-type') == 'transparent') {
 }
 ?>
 
+<?php 
+	if(get_post_type() == 'post') {
+		$header_class[] = 'dark';
+		$logo_field = 'logo-light';
+	}
+?>
+
 <?php if (ts_get_opt('header-enable-switch') == 1): ?>
 	<!-- Navigation panel -->
 	<nav class="main-nav <?php echo sanitize_html_classes(implode(' ',$header_class));?>">

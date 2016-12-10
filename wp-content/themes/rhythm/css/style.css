@@ -7780,4 +7780,27 @@ div.pp_pic_holder{
   text-align: justify; 
 }
 
+.hug_custom_space {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.hug_custom_info ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 50px 0;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #aaa;
+}
+
+.hug_custom_info ul li {
+  float: left;
+  padding: 0 20px 0 0;
+}
+
+.hug_custom_font{
+  font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
 /********************* End Css ****************************/

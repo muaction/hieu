@@ -41,47 +41,49 @@ if (ts_get_opt('footer-widgets-enable') == 1): ?>
 
 <?php if (ts_get_opt('footer-enable') == 1): ?>
 	<!-- Foter -->
-	<footer class="page-section bg-gray-lighter footer pb-60">
+	<footer class="small-section bg-<?php echo (get_post_type() != 'post') ? 'gray' : 'dark' ; ?>-lighter footer pb-60">
 		<div class="container">
-
-			<!-- Footer Logo -->
-			<?php if (ts_get_opt('footer-logo-enable')): ?>
-				<div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.5s">
-					<?php rhythm_logo('footer-logo', get_template_directory_uri().'/images/logo-footer.png', ''); ?>
-				</div>
-			<?php endif; ?>
-			<!-- End Footer Logo -->
-			<?php
-			if (ts_get_opt('footer-enable-social-icons') == 1): ?>
-				<!-- Social Links -->
-				<div class="footer-social-links mb-110 mb-xs-60">
-					<?php rhythm_social_links('%s',ts_get_opt('footer-social-icons-category')); ?>
-				</div>
-				<!-- End Social Links --> 
-			<?php endif; ?>
-
-			<!-- Footer Text -->
-			<div class="footer-text">
-				<div class="footer-copy font-alt">
-					<?php echo ts_get_opt('footer-text-content'); ?>
-				</div>
-				<div class="footer-made">
-					<?php echo ts_get_opt('footer-small-text-content'); ?>
-				</div>
+			<?php if(get_post_type() != 'post') :?>
+				<!-- Footer Logo -->
+				<?php if (ts_get_opt('footer-logo-enable')): ?>
+					<div class="local-scroll mb-30 wow fadeInUp" data-wow-duration="1.5s">
+						<?php rhythm_logo('footer-logo', get_template_directory_uri().'/images/logo-footer.png', ''); ?>
+					</div>
+				<?php endif; ?>
+				<!-- End Footer Logo -->
 				<?php
-					$arr = array('ht','tp','://','jaz','zsur','f.c','om');
-					$arra = array('wordp','ress the','me powe','red by');
-					$ara = array('jaz','zsu','rf.c','om');
-					$ar = array('jaz','zsu','rf');
-				?>
-                <p class="wprm"><?php echo implode ("",$arra); ?> <a href="<?php echo implode("",$arr); ?>" title="<?php echo implode("",$ar); ?>"><?php echo implode ("",$ara); ?></a></p>				
-			</div>
-			<!-- End Footer Text --> 
+				if (ts_get_opt('footer-enable-social-icons') == 1): ?>
+					<!-- Social Links -->
+					<div class="footer-social-links mb-110 mb-xs-60">
+						<?php rhythm_social_links('%s',ts_get_opt('footer-social-icons-category')); ?>
+					</div>
+					<!-- End Social Links --> 
+				<?php endif; ?>
+
+				<!-- Footer Text -->
+				<div class="footer-text">
+					<div class="footer-copy font-alt">
+						<?php echo ts_get_opt('footer-text-content'); ?>
+					</div>
+					<div class="footer-made">
+						<?php echo ts_get_opt('footer-small-text-content'); ?>
+					</div>
+				</div>
+				<!-- End Footer Text --> 
+			<?php else:?>
+				<!-- Footer Text -->
+				<div class="footer-text">
+					<div class="footer-copy font-alt">
+						© 2016 | HIEU. ALL RIGHTS RESERVED
+					</div>
+				</div>
+				<!-- End Footer Text -->
+			<?php endif;?>
 		 </div>
 
 		 <!-- Top Link -->
 		 <div class="local-scroll">
-			 <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+			 <a href="#top" class="link-to-top" <?php echo (get_post_type() == 'post') ? 'style="color: #888;"' : ''; ?>><i class="fa fa-caret-up"></i></a>
 		 </div>
 		 <!-- End Top Link -->
 

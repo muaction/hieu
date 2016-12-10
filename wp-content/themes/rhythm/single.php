@@ -15,6 +15,7 @@ ts_get_title_wrapper_template_part();
 		<?php get_template_part('templates/global/blog-before-content'); ?>
 		
 		<?php while ( have_posts() ) : the_post(); ?>
+			<?php setPostViews(get_the_ID()); ?>
 			<?php get_template_part( 'templates/content/content', 'single' ); ?>
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
