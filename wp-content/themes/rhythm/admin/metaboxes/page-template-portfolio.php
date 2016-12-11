@@ -96,7 +96,7 @@ $sections[] = array(
 			'type'      => 'select',
 			'title'     => __('Categories', 'rhythm'),
 			'subtitle'  => __('Select desired categories', 'rhythm'),
-			'options'   => ts_get_terms_assoc('portfolio-category'),
+			'options'   => ts_get_terms_assoc('category'),
 			'multi'     => true,
 			'default' => '',
 		),

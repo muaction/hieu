@@ -5,7 +5,6 @@
  * @package Rhythm
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="text">
 		<?php if (ts_get_opt('portfolio-content-bottom') != 1): ?>

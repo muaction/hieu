@@ -49,7 +49,7 @@ function ts_redux_get_portfolio_metaboxes() {
 	return array(
 		'id' => 'ts-portfolio-options',
 		'title' => __('Portfolio Options', 'rhythm'),
-		'post_types' => array('portfolio'),
+		'post_types' => array('portfolio','post'),
 		'position' => 'normal', // normal, advanced, side
 		'priority' => 'high', // high, core, default, low
 		'sections' => $sections

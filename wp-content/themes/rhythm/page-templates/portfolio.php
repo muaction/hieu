@@ -166,23 +166,24 @@ $args = array(
 	'exclude' => '',
 	'meta_key' => '',
 	'meta_value' => '',
-	'post_type' => 'portfolio',
+	'post_type' => array('post'),
 	'post_mime_type' => '',
 	'post_parent' => '',
 	'paged' => $paged,
 	'post_status' => 'publish'
 );
 
-$categories = ts_get_post_opt('portfolio-category');
-if (is_array($categories)) {
+// $categories = ts_get_post_opt('category');
+$categories = 'du-an';
+// if (is_array($categories)) {
 	$args['tax_query'] = array(
 		array(
-			'taxonomy' => 'portfolio-category',
-			'field'    => 'id',
+			'taxonomy' => 'category',
+			'field'    => 'slug',
 			'terms'    => $categories,
 		),
 	);
-}
+// }
 
 $exclude_posts = ts_get_post_opt('portfolio-exclude-posts');
 if (!empty($exclude_posts)) {
